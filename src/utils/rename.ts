@@ -27,14 +27,14 @@ export async function renameProject(
   const readmePath = join(projectDir, "README.md")
   const readme = `# ${projectName}
 
-Built with [scaffo](https://github.com/typerobot/scaffo) — an opinionated SaaS starter kit.
+Built with [scaffo](https://github.com/typerobot/scaffo) — an opinionated AI SaaS starter kit.
 
 ## Getting Started
 
 \`\`\`bash
 cp .env.example .env        # Edit with your settings
 pnpm services:up            # Start Postgres, Redis, etc.
-pnpm db:push && pnpm db:seed
+pnpm db:migrate && pnpm db:seed
 pnpm dev                    # Start dev server
 \`\`\`
 

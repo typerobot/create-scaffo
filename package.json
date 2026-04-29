@@ -1,7 +1,7 @@
 {
   "name": "create-scaffo",
   "version": "0.1.0",
-  "description": "Create new scaffo SaaS projects",
+  "description": "Create new scaffo AI SaaS projects",
   "type": "module",
   "bin": {
     "create-scaffo": "./dist/index.js"

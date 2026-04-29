@@ -16,7 +16,7 @@ const main = defineCommand({
   meta: {
     name: "create-scaffo",
     version: "0.1.0",
-    description: "Create a new scaffo SaaS project",
+    description: "Create a new scaffo AI SaaS project",
   },
   args: {
     name: {
@@ -40,7 +40,7 @@ const main = defineCommand({
       process.exit(1)
     }
 
-    consola.box("Scaffo — SaaS Starter Kit")
+    consola.box("Scaffo — AI SaaS Starter Kit")
 
     // 1. Download template
     consola.start("Downloading scaffo template...")
@@ -106,7 +106,7 @@ const main = defineCommand({
         `  cd ${projectName}\n` +
         `  cp .env.example .env        # Edit with your settings\n` +
         `  pnpm services:up            # Start Postgres, Redis, etc.\n` +
-        `  pnpm db:push && pnpm db:seed\n` +
+        `  pnpm db:migrate && pnpm db:seed\n` +
         `  pnpm dev                    # Start dev server`,
     )
   },

@@ -1,6 +1,6 @@
 # create-scaffo
 
-Create new scaffo SaaS projects from the command line.
+Create new scaffo AI SaaS projects from the command line.
 
 ## Usage
 
@@ -38,7 +38,7 @@ The scaffo template is a private repository. The CLI detects your GitHub token a
 cd my-app
 cp .env.example .env        # Edit with your settings
 pnpm services:up            # Start Postgres, Redis, etc.
-pnpm db:push && pnpm db:seed
+pnpm db:migrate && pnpm db:seed
 pnpm dev                    # Start dev server
 ```
 

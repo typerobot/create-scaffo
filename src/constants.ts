@@ -19,6 +19,7 @@ export const FILES_TO_REMOVE = [
   ".omc/",
   ".omx/",
   ".claude/",
+  ".graphifyignore",
 
   // Template methodology docs (not user docs)
   "docs/",
