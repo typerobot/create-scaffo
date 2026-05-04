@@ -1,5 +1,6 @@
 import { defineCommand, runMain } from "citty"
 import { spawnSync } from "node:child_process"
+import { readFileSync } from "node:fs"
 import { resolve } from "node:path"
 import consola from "consola"
 import {
@@ -12,10 +13,21 @@ import { downloadScaffoTemplate } from "./utils/template.js"
 import { cleanupTemplateFiles } from "./utils/cleanup.js"
 import { renameProject } from "./utils/rename.js"
 
+function readPackageVersion(): string {
+  try {
+    const packageJson = JSON.parse(
+      readFileSync(new URL("../package.json", import.meta.url), "utf-8"),
+    ) as { version?: unknown }
+    return typeof packageJson.version === "string" ? packageJson.version : "0.0.0"
+  } catch {
+    return "0.0.0"
+  }
+}
+
 const main = defineCommand({
   meta: {
     name: "create-scaffo",
-    version: "0.1.0",
+    version: readPackageVersion(),
     description: "Create a new scaffo AI SaaS project",
   },
   args: {
