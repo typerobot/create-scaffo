@@ -1,8 +1,16 @@
 {
   "name": "create-scaffo",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Create new scaffo AI SaaS projects",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typerobot/create-scaffo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/typerobot/create-scaffo/issues"
+  },
+  "homepage": "https://github.com/typerobot/create-scaffo#readme",
   "bin": {
     "create-scaffo": "dist/index.js"
   },
