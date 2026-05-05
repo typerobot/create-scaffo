@@ -119,6 +119,7 @@ const main = defineCommand({
         `  cp .env.example .env        # Edit with your settings\n` +
         `  pnpm services:up            # Start Postgres, Redis, etc.\n` +
         `  pnpm db:migrate && pnpm db:seed\n` +
+        `  pnpm run build              # Build all packages and apps\n` +
         `  pnpm dev                    # Start dev server`,
     )
   },

@@ -96,6 +96,7 @@ Built with [scaffo](https://github.com/typerobot/scaffo) — an opinionated AI S
 cp .env.example .env        # Edit with your settings
 pnpm services:up            # Start Postgres, Redis, etc.
 pnpm db:migrate && pnpm db:seed
+pnpm run build              # Build all packages and apps
 pnpm dev                    # Start dev server
 \`\`\`
 
