@@ -1,6 +1,6 @@
 # create-scaffo
 
-Create new scaffo AI SaaS projects from the command line.
+Create new scaffo AI agent harness SaaS projects from the command line.
 
 ## Usage
 

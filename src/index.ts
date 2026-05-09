@@ -28,7 +28,7 @@ const main = defineCommand({
   meta: {
     name: "create-scaffo",
     version: readPackageVersion(),
-    description: "Create a new scaffo AI SaaS project",
+    description: "Create a new scaffo AI agent harness SaaS project",
   },
   args: {
     name: {
@@ -52,7 +52,7 @@ const main = defineCommand({
       process.exit(1)
     }
 
-    consola.box("Scaffo — AI SaaS Starter Kit")
+    consola.box("Scaffo — AI Agent Harness + SaaS Boilerplate")
 
     // 1. Download template
     consola.start("Downloading scaffo template...")

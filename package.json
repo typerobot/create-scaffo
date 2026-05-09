@@ -1,7 +1,7 @@
 {
   "name": "create-scaffo",
-  "version": "0.1.4",
-  "description": "Create new scaffo AI SaaS projects",
+  "version": "0.1.5",
+  "description": "Create new scaffo AI agent harness SaaS projects",
   "type": "module",
   "repository": {
     "type": "git",

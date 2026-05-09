@@ -30,12 +30,15 @@ export async function renameProject(
   pkg.name = projectName
   await writeFile(pkgPath, JSON.stringify(pkg, null, 2) + "\n")
 
-  // 2. Update app.config.ts — both app.name and email.fromName
+  // 2. Update app.config.ts — app identity and email sender name
   const configPath = join(projectDir, "app.config.ts")
   let config = await readFile(configPath, "utf-8")
 
   // Replace app.name (word-boundary ensures we don't match fromName, legalName, etc.)
   config = config.replace(/(\bname:\s*")([^"]*?)(")/, `$1${projectName}$3`)
+
+  // Replace app.legalName
+  config = config.replace(/(legalName:\s*")([^"]*?)(")/, `$1${projectName}$3`)
 
   // Replace email.fromName
   config = config.replace(/(fromName:\s*")([^"]*?)(")/, `$1${projectName}$3`)
@@ -88,7 +91,7 @@ export async function renameProject(
   const readmePath = join(projectDir, "README.md")
   const readme = `# ${projectName}
 
-Built with [scaffo](https://github.com/typerobot/scaffo) — an opinionated AI SaaS starter kit.
+Built with [scaffo](https://github.com/typerobot/scaffo) — an opinionated AI agent harness SaaS boilerplate.
 
 ## Getting Started
 
